@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Frutas & Vegetais</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Estilização css da página -->
+	<style>
+		:root {
+			--cor-fundo: #7242b2;
+			--cor-base: #4d119b;
+			--cor-links: #3720ce;
+			--cor-principal:#e2e2e2;
+			--cor-destaque: #d3d1d6;
+		}
+
+		::selection {
+			background-color: var(--cor-fundo);
+			color: var(--cor-principal);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Space Grotesk', Arial, sans-serif;
+			background-color: var(--cor-fundo);
+		}
+
+		header {
+			text-align: center;
+			border-radius: 10px;
+
+			background-color: var(--cor-base);
+			color: #ffffff;
+			font-size: 0.9rem;
+		}
+
+		header, main, footer {
+			margin: 5px auto 0;
+			width: 85vw;
+			padding: 20px;
+		}
+
+		@media (min-width: 768px) {
+			header, main, footer {
+				width: 70vw;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			header, main, footer {
+				width: 55vw;
+			}
+		}
+
+		main {
+			background-color: var(--cor-principal);
+			border-radius: 10px 10px 0 0;
+		}
+
+		h1 {
+			text-align: justify;
+		}
+
+		h2 {
+			text-align: center;
+			background-color: var(--cor-destaque);
+			padding: 20px;
+			border-radius: 10px;
+			max-width: 40rem;
+			margin: 10px auto;
+		}
+
+		#apresentacao h2 {
+			margin-top: 0;
+		}
+
+		p {
+			margin: 10px 0;
+			padding: 3px;
+			text-indent: 20px;
+			text-align: justify;
+			font-size: 1.2rem;
+		}
+
+		ul {
+			list-style-type: none;
+		}
+
+		li::before {
+			content: "•";
+		}
+
+		a, a:visited, a:active {
+			color: var(--cor-links);
+			text-decoration: none;
+			background-color: var(--cor-destaque);
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.duplo {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.duplo article {
+			width: 31rem;
+		}
+
+		@media (min-width: 768px) {
+			.duplo article {
+				width: 24rem;
+			}
+		}
+
+		#instruction2 span {
+			text-decoration: underline;
+		}
+
+		/* Relativo ao vídeo do youtube embedded*/
+		#video {
+			display: flex;
+			justify-content: center;
+		}
+
+		#video iframe {
+			border-radius: 10px;
+		}
+
+		#contatos {
+			margin-bottom: 10px;
+		}
+
+		footer {
+			margin: 0 auto;
+
+			background-color: var(--cor-destaque);
+			border-radius: 0 0 10px 10px;
+			box-shadow: #808080 inset 0px 1px 3px 0px;
+			padding-bottom: 2rem;
+		}
+
+		footer h2 {
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		footer a {
+			background-color: var(--cor-principal);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>
+			Auxílio na tomada de decisão no processo de compra de frutas e vegetais
+		</h1>
+	</header>
+
+	<main>
+		<section id="apresentacao">
+			<article>
+				<h2>
+					Bem-vindo(a) à nossa página sobre o uso de Inteligência Artificial na avaliação da qualidade de frutas e vegetais!
+				</h2>
+				
+				<p>
+					Nós estamos empolgados em compartilhar com você nossa ideia e mostrar como ela foi abordada. Aqui você encontrará informações sobre a importância desse tema,
+					os desafios envolvidos e como a IA pode ser uma solução eficiente.
+				</p>
+				
+				<p>
+					Fique à vontade para explorar e aprender mais sobre essa fascinante aplicação da tecnologia.
+					Se tiver quaisquer dúvidas ou curiosidades,
+					não hesite em entrar em <a href="#contatos">contato</a>.
+				</p>
+			</article>
+
+			<article id="ideia">
+				<h2>
+					Surge uma ideia...
+				</h2>
+				
+				<p>
+					Toda grande ideia tem um ponto de partida. Pode ser um problema que precisa ser resolvido,
+					uma necessidade que precisa ser atendida ou simplesmente uma visão inovadora. E foi assim que surgiu a nossa ideia.
+				</p>
+				
+				<p>
+					Muitas pessoas enfrentam dificuldades na hora de escolher frutas e vegetais na hora das compras. Afinal,
+					como saber se estão realmente frescos e de qualidade?
+				</p>
+
+				<p>
+					Para solucionar esse problema cotidiano,
+					propomos uma solução prática e eficiente: um aplicativo para celular que,
+					por meio da câmera,
+					auxilia na avaliação dos alimentos e informa se são ou não uma boa escolha. Com essa solução,
+					a escolha de frutas e vegetais de qualidade será muito mais fácil e segura para os consumidores.
+				</p>
+			</article>
+		</section>
+		
+		<section class="duplo">
+			<article id="pessoas">
+				<h2>
+					Encontrando pessoas
+				</h2>
+				
+				<p>
+					O próximo passo foi criar um grupo disposto a enfrentar esse desafio! A partir da proposta,
+					8 pesquisadores se identificaram com a solução:
+				</p>
+				
+				<ul>
+					<li>
+						<b>(Líder)</b> Lucas de Jesus - <a href="mailto:lucasdejesus@discente.ufg.br">lucasdejesus@discente.ufg.br</a>
+					</li>
+					<li>
+						Adriano - <a href="mailto:ferreira_adriano@discente.ufg.br">ferreira_adriano@discente.ufg.br</a>
+					</li>
+					<li>
+						Brian - <a href="mailto:brian@discente.ufg.br">brian@discente.ufg.br</a>
+					</li>
+					<li>
+						João Vitor - <a href="mailto:joaovitor13@discente.ufg.br">joaovitor13@discente.ufg.br</a>
+					</li>
+					<li>
+						Juan - <a href="mailto:juanqueiroz@discente.ufg.br">juanqueiroz@discente.ufg.br</a>
+					</li>
+					<li>
+						Larissa - <a href="mailto:larissarosa@discente.ufg.br">larissarosa@discente.ufg.br</a>
+					</li>
+					<li>
+						Luan - <a href="mailto:luangabriel@discente.ufg.br">luangabriel@discente.ufg.br</a>
+					</li>
+					<li>
+						Matheus - <a href="mailto:carlos_lima@discente.ufg.br">carlos_lima@discente.ufg.br</a>
+					</li>
+				</ul>
+			</article>
+
+			<article id="planejamento">
+				<h2>
+					Nasce um planejamento
+				</h2>
+				
+				<p>
+					Segundo orientações dos tutores,
+					decidimos tomar por base o seguinte artigo: <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2325/1/012055/pdf" target="_blank" rel="noopener noreferrer">Real-Time Quality Assurance of Fruits and Vegetables with Artificial Intelligence</a>. Após diversas reuniões e debates,
+					chegamos à conclusão de que para concretizar esse projeto
+					seria necessário ter conhecimento em duas áreas fundamentais: <a href="https://github.com/Projeto-Frutas-Vegetais-Programa-K/.github/tree/main/profile#mobile" target="_blank" rel="noopener noreferrer">Desenvolvimento Mobile</a> e <a href="https://github.com/Projeto-Frutas-Vegetais-Programa-K/.github/tree/main/profile#inteligência-artificial" target="_blank" rel="noopener noreferrer">Inteligência Artificial</a>.
+				</p>
+				
+				<p>
+					Sabendo disso,
+					nosso grupo decidiu dividir o problema em etapas. Até o momento:
+				</p>
+				
+				<ul>
+					<li>
+						<a href="#instruction1">INSTRUCTION 1</a> - Inteligência Artificial
+					</li>
+					<li>
+						<a href="#instruction2">INSTRUCTION 2</a> - Desenvolvimento Mobile
+					</li>
+					<li>
+						...
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<section id="instruction2">
+			<h2>
+				INSTRUCTION 2 - Desenvolvimento Mobile
+			</h2>
+
+			<p>
+				Para alcançar o nosso objetivo, precisamos obter o conhecimento necessário para o desenvolvimento de um aplicativo mobile. Como primeiro passo na nossa jornada,
+				decidimos criar um app simples que acesse a câmera e a galeria do celular. Com isso em mente, escolhemos dois frameworks para o nosso estudo sobre desenvolvimento mobile: <span>Flutter (Dart)</span> e <span>Kivy (Python)</span>.
+			</p>
+		</section>
+
+		<section class="duplo">
+			<article id="Flutter">
+				<h3>
+					O que é o Kivy?
+				</h3>
+
+				<p>
+					O kivy é um framework de código aberto baseado na linguagem python, que é uma das principais linguagens para desenvolvimento de softwares
+					envolvendo machine learning e ciência de dados. Um dos principais atrativos do framework é que ele é multiplataforma, ou seja, uma única
+					aplicação é necessária para rodar em diversos sistemas operacionais, como Android, iOS, Windows, entre outros; além de ser bem flexível
+					e simples no desenvolvimento das aplicações.
+				</p>
+			</article>
+
+			<article id="Kivy">
+				<h3>
+					O que é o Flutter?
+				</h3>
+
+				<p>
+					Flutter é um framework de código aberto da Google para criar aplicativos multiplataforma belos e compilados nativamente a partir de uma única base de código.
+					Uma das principais razões para considerarmos o Flutter é a possibilidade de criar futuramente
+					um app que possa rodar em diferentes plataformas com apenas um código fonte. Além disso, as funcionalidades de Hot Reload e Hot Restart tornam o processo de
+					desenvolvimento muito mais ágil.
+				</p>
+			</article>
+		</section>
+
+		<section id="demonstracao">
+			<h3>
+				Demonstração
+			</h3>
+
+			<p>
+				Segue abaixo um vídeo demonstrativo do protótipo de um aplicativo desenvolvido com <b>Flutter</b>:
+			</p>
+
+			<!-- Video demonstrativo (youtube)-->
+			<div id="video">
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/TC2ewNug0ag" title="Picky - Vídeo demonstrativo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</section>
+
+		<section id="passos">
+			<h2>
+				Guiando seus passos
+			</h2>
+			
+			<p>
+				Agora, vamos ao mais importante: te ensinar a aprender, como nós fizemos! Abaixo está uma trilha de consulta dos nossos repositórios para cada parte do projeto,
+				e você poderá seguir o mesmo caminho que nós trilhamos. Além disso, o resultado do aplicativo inicial pode ser encontrado neste <a href="https://github.com/Projeto-Frutas-Vegetais-Programa-K/picky" target="_blank" rel="noopener noreferrer">repositório</a>.
+			</p>
+
+			<ul>
+				<li>
+					Se deseja iniciar no <b>Flutter</b>, siga para o repositório: <a href="https://github.com/Projeto-Frutas-Vegetais-Programa-K/prototipo-flutter" target="_blank" rel="noopener noreferrer">prototipo-flutter</a>
+				</li>
+				<li>
+					Se deseja iniciar no <b>Kivy</b> siga para o repositório: <a href="https://github.com/Projeto-Frutas-Vegetais-Programa-K/prototipo-kivy" target="_blank" rel="noopener noreferrer">prototipo-kivy</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer id="contatos">
+		<h2>
+			Contato
+		</h2>
+		
+		<p>
+			Se deseja saber mais sobre:
+		</p>
+		
+		<ul>
+			<li>
+				<b>Flutter</b>: fale com <a href="mailto:ferreira_adriano@discente.ufg.br">Adriano</a> ou <a href="mailto:brian@discente.ufg.br">Brian</a>
+			</li>
+			<li>
+				<b>Kivy</b>: fale com <a href="mailto:carlos_lima@discente.ufg.br">Matheus</a> ou <a href="mailto:juanqueiroz@discente.ufg.br">Juan</a>
+			</li>
+		</ul>
+	</footer>
+</body>
+
+</html>
