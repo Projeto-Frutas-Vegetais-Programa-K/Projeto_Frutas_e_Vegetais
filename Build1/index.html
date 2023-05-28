@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Frutas & Vegetais - Programa K</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon png -->
+	<link rel="icon" type="image/png" href="https://i.imgur.com/VsN9VUA.jpg">
+
+	<!-- Meta tags para Whatsapp -->
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Projeto Frutas e Vegetais - Programa K">
+	<meta property="og:description" content="Use a IA para te ajudar a escolher boas frutas e vegetais na hora de comprar!">
+	<meta property="og:url" content="https://projeto-frutas-vegetais-programa-k.github.io/Projeto_Frutas_e_Vegetais/">
+	<meta property="og:image" content="https://i.imgur.com/VsN9VUA.jpg">
+	<meta property="og:image:alt" content="Logo do site">
+	<meta property="og:image:width" content="512">
+	<meta property="og:image:height" content="512">
+
+	<!-- Meta tags para Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Projeto Frutas e Vegetais - Programa K">
+	<meta name="twitter:description" content="Use a IA para te ajudar a escolher boas frutas e vegetais na hora de comprar!">
+	<meta name="twitter:image" content="https://i.imgur.com/VsN9VUA.jpg">
+
+	<!-- Fonte Space Grotesk 400, 700 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Fancybox -->
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
+	<!-- Estilização css da página -->
+	<style>
+		:root {
+			--cor-fundo: #7242b2;
+			--cor-base: #4d119b;
+			--cor-links: #3720ce;
+			--cor-principal:#e2e2e2;
+			--cor-destaque: #d3d1d6;
+		}
+
+		::selection {
+			background-color: var(--cor-fundo);
+			color: var(--cor-principal);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Space Grotesk', Arial, sans-serif;
+			background-color: var(--cor-fundo);
+		}
+
+		header {
+			text-align: center;
+			border-radius: 10px;
+
+			background-color: var(--cor-base);
+			color: #ffffff;
+			font-size: 0.9rem;
+		}
+
+		header, main, footer {
+			margin: 5px auto 0;
+			width: 85vw;
+			padding: 20px;
+		}
+
+		@media (min-width: 768px) {
+			header, main, footer {
+				width: 80vw;
+			}
+		}
+
+		@media (min-width: 1440px) {
+			header, main, footer {
+				width: 60vw;
+			}
+		}
+
+		main {
+			background-color: var(--cor-principal);
+			border-radius: 10px 10px 0 0;
+		}
+
+		h1 {
+			text-align: justify;
+		}
+
+		h2 {
+			text-align: center;
+			background-color: var(--cor-destaque);
+			padding: 20px;
+			border-radius: 10px;
+			max-width: 40rem;
+			margin: 10px auto;
+		}
+
+		#apresentacao article:first-child h2 {
+			margin-top: 0;
+		}
+
+		#apresentacao li {
+			font-weight: 700;
+		}
+
+		p {
+			margin: 10px 0;
+			padding: 3px;
+			text-indent: 20px;
+			text-align: justify;
+			font-size: 1.2rem;
+		}
+
+		ul {
+			padding-inline-start: 20px;
+		}
+
+		ul p {
+			margin-left: -20px;
+		}
+
+		ul img {
+			margin-left: -10px;
+		}
+
+		li {
+			margin: 2px 0;
+			font-size: 1.2rem;
+		}
+
+		a, a:visited, a:active {
+			color: var(--cor-links);
+			text-decoration: none;
+			background-color: var(--cor-destaque);
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		img {
+			display: block;
+			margin: 10px auto;
+			max-width: 100%;
+			border-radius: 10px;
+		}
+
+		.duplo {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.duplo article {
+			width: 31rem;
+		}
+
+		@media (min-width: 768px) {
+			.duplo article {
+				width: 28rem;
+			}
+		}
+
+		#instruction2 span {
+			text-decoration: underline;
+		}
+
+		/* Relativo ao vídeo do youtube embedded */
+		#video {
+			display: flex;
+			justify-content: center;
+		}
+
+		#video iframe {
+			border-radius: 10px;
+		}
+
+		#contatos {
+			margin-bottom: 10px;
+		}
+
+		footer {
+			margin: 0 auto;
+
+			background-color: var(--cor-destaque);
+			border-radius: 0 0 10px 10px;
+			box-shadow: #808080 inset 0px 1px 3px 0px;
+			padding-bottom: 2rem;
+		}
+
+		footer h2 {
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		footer a, footer a:visited, footer a:active {
+			background-color: var(--cor-principal);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>
+			Auxílio na tomada de decisão no processo de compra de frutas e vegetais
+		</h1>
+	</header>
+
+	<main>
+		<section id="apresentacao">
+			<article>
+				<h2>
+					Build 1 - Montagem e tratamento do Dataset
+				</h2>
+				
+				<p>
+					Em uma <a href="https://www.programak.info/copy-of-corrida-segura" target="_blank" rel="noopener noreferrer">etapa anterior</a>, propusemos e executamos um modelo de machine learning  experimental para o controle de qualidade de frutas e legumes. 
+				</p>
+
+				<p>
+					No meio do processo de experimentação, nos deparamos com um problema: a ausência de um conjunto de dados completo e confiável. Dessa forma, precisávamos de um dataset mais elaborado e que permitisse a criação de um modelo mais robusto, tanto em precisão como em abrangência, para os mais diversos tipos de frutas e legumes.
+				</p>
+				
+				<p>
+					Se tiver quaisquer dúvidas ou curiosidades,
+					não hesite em entrar em <a href="#contatos">contato</a>.
+				</p>
+			</article>
+
+			<article id="metodologia">
+				<h2>
+					Metodologia utilizada
+				</h2>
+
+				<a href="https://i.imgur.com/5ovwnjY.jpg" data-fancybox="galeria" data-caption="Plano de ação e prazos previstos">
+					<img src="https://i.imgur.com/5ovwnjY.jpg" alt="Plano de ação e prazos previstos">
+				</a>
+				
+				<ul>
+					<li>Aquisição</li>
+					<p>
+						Foi realizada uma coleta de datasets públicos pelos integrantes, bem como a seleção dos principais a serem utilizados e incluídos no dataset final. A lista gerada continha 22 datasets e, depois das considerações iniciais, restaram <a href="https://docs.google.com/document/d/1lhcSW2DO2UII1VRWhzweLsfMvK_xCnN3G5Ad7-o-DPg/edit" target="_blank" rel="noopener noreferrer">19 datasets</a>.
+					</p>
+					
+					<li>Organização</li>
+					<p>
+						Dividimos os dados em categorias relevantes, os organizamos consistentemente segundo critérios que foram decididos por um consenso entre os integrantes e, em seguida, criamos referências para eles, correlacionando imagens e categorias. Em resumo, <a href="https://docs.google.com/document/d/1jsVHbdOQLWcwGHC9okxGV62geEJ9r5NoKlrMz_llTJU/edit" target="_blank" rel="noopener noreferrer">padronizamos nossos dados</a>.
+					</p>
+					<ul>
+						<li>Critérios de seleção</li>
+						<p>
+							Imagens diversificadas, datasets sem Data Augmentation, qualidade das imagens, quantidade mínima de imagens por classe.
+						</p>
+
+						<li>Padrão CSV</li>
+						<p>
+							De modo a facilitar o processo de uso do dataset resultante, geramos um arquivo csv para referenciar as imagens com suas respectivas classes.
+						</p>
+					</ul>
+					<a href="https://i.imgur.com/O5zgV7q.jpg" data-fancybox="galeria" data-caption="Organização do CSV">
+						<img src="https://i.imgur.com/O5zgV7q.jpg" alt="Organização do CSV">
+					</a>
+					
+					<li>Compilação</li>
+					<p>
+						Colocamos os conjuntos de dados selecionados no padrão decidido e agregamos todos em um único dataset. O resultado foi hospedado no <a href="https://www.kaggle.com/datasets/projetofv/dataset-frutas-e-vegetais" target="_blank" rel="noopener noreferrer">Kaggle</a>.
+					</p>
+					<p>
+						Para mais informações a respeito do dataset produzido em questão, acesse o conteúdo do kaggle, onde estão listadas todas as classes e fontes utilizadas.
+					</p>
+				</ul>
+			</article>
+		</section>
+	</main>
+
+	<footer id="contatos">
+		<h2>
+			Contato
+		</h2>
+		
+		<ul>
+			<li>
+				<b>(Líder)</b> <a href="https://github.com/Mwar22" target="_blank" rel="noopener noreferrer">Lucas de Jesus</a> - lucasdejesus@discente.ufg.br
+			</li>
+			<li>
+				<a href="https://github.com/lopes-adriano" target="_blank" rel="noopener noreferrer">Adriano</a> - ferreira_adriano@discente.ufg.br
+			</li>
+			<li>
+				<a href="https://github.com/BrianMath" target="_blank" rel="noopener noreferrer">Brian</a> - brian@discente.ufg.br
+			</li>
+			<li>
+				<a href="https://github.com/joaovitor13-web" target="_blank" rel="noopener noreferrer">João Vitor</a> - joaovitor13@discente.ufg.br
+			</li>
+			<li>
+				<a href="https://github.com/JCarlos251" target="_blank" rel="noopener noreferrer">Juan</a> - juanqueiroz@discente.ufg.br
+			</li>
+			<li>
+				<a href="https://github.com/larissa3Xavier" target="_blank" rel="noopener noreferrer">Larissa</a> - larissarosa@discente.ufg.br
+			</li>
+			<li>
+				<a href="https://github.com/LuanGOliviera" target="_blank" rel="noopener noreferrer">Luan</a> - luangabriel@discente.ufg.br
+			</li>
+			<li>
+				Matheus - carlos_lima@discente.ufg.br
+			</li>
+		</ul>
+	</footer>
+
+	<script>
+		Fancybox.bind("[data-fancybox]", {});
+	</script>
+</body>
+
+</html>
